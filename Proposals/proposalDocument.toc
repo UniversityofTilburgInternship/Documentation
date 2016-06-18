@@ -1,0 +1,5 @@
+\contentsline {section}{Introduction}{3}{section*.2}
+\contentsline {section}{Proposal 1: Obstacle avoidance}{4}{section*.4}
+\contentsline {section}{Proposal 2: The puzzle box}{6}{section*.9}
+\contentsline {section}{Proposal 3: Traffic simulator}{8}{section*.14}
+\contentsline {section}{References}{10}{section*.19}

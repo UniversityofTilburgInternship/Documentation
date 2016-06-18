@@ -1,0 +1,210 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+%%%BEGIN Article customizations
+%Set font, font size and char encoding
+\documentclass[11pt]{article} 
+
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{xcolor}
+\usepackage{lastpage}
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} 
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} 
+% (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+
+
+\title{\Huge Internship Project Proposals}
+\author{Steven Schenk \& Robert Kraaijeveld \& Cees-Jan Nolen\\
+	Institute for Communication, Media and Information technologies\\
+	Hogeschool Rotterdam
+	Rotterdam, Zuid-Holland, The Netherlands \\
+	}
+\begin{document}
+\nocite{*}
+\maketitle
+\lhead{Internship Project Proposals}
+\rhead{}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage\ of \pageref*{LastPage}}
+
+\newpage
+\tableofcontents
+\pagebreak
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction}
+In this document, we outline three possible projects that we could implement for the University of Tilburg in our internship. These proposals all revolve around the use of the Experience Room's unique properties, which were demonstrated to us in our initial visit to the University. 
+
+~\\
+Especially the ability to place physical, real world objects in the room and have users interact with them is something we consider very special, and we tried to implement this possibility in at least one of our proposals. 
+
+~\\
+Another important property that we observed during our demo in the Experience Room was that it allows the user to move around in almost any way he/she sees fit: Ducking, jumping, walking around and leaning are no problem for the Experience Room's tracking sensors. 
+
+~\\
+We tried to incorporate this property into each of our proposals, ensuring that what we are (hopefully) going to be creating is not just a reskin of something that can also be done in a regular or relatively regular environment. After all, who wants to play Call of Duty in a large room with no added features when they might as well do so at their own gaming systems in the comfort of  their homes?
+
+~\\
+We hope that you will be interested in these proposals, and we appreciate any feedback that you would have for us.
+
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Proposal 1:  Obstacle avoidance}
+\section*{Proposal 1:  Obstacle avoidance}
+Our first proposals' main goal is to get the user as physically active as possible. We intend to harness the full power of the experience room by making the user having to duck, jump, lean and run around the room. Safety is not much of an issue, since the user can still see where the actual wall is located. Also, the walls themselves are not made out of sensors or other sensitive materials, so brushing against them would have little consequence.
+
+\subsubsection*{General idea}
+We want to create a Temple Run-esque (see [2]) obstacle avoidance game, in which the player has to jump over, duck beneath and otherwise avoid all sorts of obstacles coming towards him/her on a continous race-course. Extra challenge can be added to this by making the virtual track move faster, making obstacles appear more frequently. 
+
+~\\
+In order to make the most of the Experience Rooms' potential, we want to switch the wall that is being used for the game frequently. Not only will this provide the maximum use of the Room, it will also add another challenge to the players reflexes. Since if the player does not turn around to face the now 'main' wall fast enough, he might bump into obstacles that he never saw coming.
+
+~\\
+The main goal that we have in mind with this possible project is to combine simple physical excersise with entertainment, allowing players to get some explosive excersise in whilst still feeling like they are playing a game, rather than just tiring themselves out for the sake of tiring themselves out.
+
+~\\
+We intend to keep the required movements restricted to mostly ducking, jumping, switching places and possibly lying down and standing back up again, since any more complicated excersises like push-ups etc. would require a lot of very advanced tracking. Another reason to keep the movements simple is the fact that complicated manuevers would be difficult to explain within the actual game itself. 
+
+~\\
+This would become more important if future installments of the game would contain more context and artwork like Temple Run does; how would the game explain why the player, running through Aztec ruins has to do 25 push-ups all of a sudden?
+
+
+\newpage
+\phantomsection
+\subsubsection*{Implementation challenges}
+There are a few challenges to be overcome if this project were to see the light of day. People of different physiques duck, jump and lie down different from each other: Detecting different variations of these kinds of movement might prove difficult. 
+
+~\\
+Another very practical, also physique-related problem is that some players, especially the very tall, might be prone to hit the ceiling or parts of the equipment when jumping a bit too vigorously. Lastly, detecting whether a player is still standing in front of the original screen once this has ceased being the 'main' screen and vice versa may also prove to be very challenging.
+
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Proposal 2:  The puzzle box}
+\section*{Proposal 2:  The puzzle box}
+Our second idea was inspired by the acclaimed PC puzzling game, 'The Room'. Contrary to what the title suggests, the player spends most of the time solving various puzzle boxes and ornaments, rotating them and meticulously searching their surfaces for hidden levers and the like. We thought it would be interesting to create a similar game within the Experience Room.
+
+\subsubsection*{General idea}
+We want to create a puzzle game, in which the player has to solve various small puzzles and find hidden controls in order to further his exploration of the box. The Experience Room will allow the player to actively walk around the box, rotating it by either looking or using the remote control.
+
+~\\
+Carefull use of lightning and atmospheric music will enable a very immersive experience for the player, being able to walk around the mysterious box, carefully examining its' every surface for clues.
+
+~\\
+Since we want the player to be able to examine the box from all sides, we are going to utilise each wall fully. By using each wall and allowing the player as much exploration as possible, we will be able to showcase the immersive experience that the Experience Room can offer. 
+
+~\\
+On another note, creating a deeply immersive puzzle game rather than say, a shooter or a fitness game, really demonstrates the multi-faceted abilities of the Experience Room.
+
+\newpage
+\phantomsection
+\subsubsection*{Implementation challenges}
+One of the biggest problems in creating a puzzle game for the Experience Room is going to be the games' length. To make the mystery of the box substantial, the game would have to be a relatively lengthy experience, much more so than proposal no. 1 for instance.
+
+~\\
+This means a few things. Firstly, a chair might have to be installed, for the player is not always going to be actively walking around the box. Also, if the player would have to stand whilst pondering on puzzles for hours on end, he/she would become fatigued, killing immersion. 
+
+~\\
+Secondly, a lengthy game will make this idea slightly harder to showcase. It will be much easier to 'sell' the capabilities of the Experience Room with a quick, explosive 2 minute demo than a 3 hour-long puzzle experience, however immersive. Still, the idea of a more deep experience might attract audiences, and we think that this difference from more conventional implementations is what makes this idea interesting.
+
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Proposal 3:  Traffic simulator}
+\section*{Proposal 3:  Traffic simulator}
+Last, but certainly not least we have an idea which fits more into the 'edutainment' category. The Netherlands is of the more bike-heavy countries of the world, and unfortunately this fact brings a lot of bike-traffic related deaths with it. [2] notes that studies by the Central Bureau for Statistics indicate a rise in the relative amount of bike-users that have fatal accidents. 
+
+~\\
+With this idea, we intend to create a biking simulation to help train children and other demographics to safely navigate the perilous Dutch traffic.
+
+\subsubsection*{General idea}
+We want to make maximal use of the four walls that the Experience Room offers, as well as take advantage of the option to place physical objects in the Experience Room. 
+
+~\\
+With this goal in mind, we intend to create a simulation of Dutch traffic, including roads, bicycle paths, cars, fellow bicyclists and other hazards being project on all 4 screens. Since we are able to track the position of the users' head, it will be possible to let the user look around for possible hazards. 
+
+~\\
+We intend to place a real, physical bike on a small platform (To prevent the wheels from actually touching the ground) in order to give the user the actual feeling and most importantly, feedback that a real bike brings. Also, having an actual bike to control rather than something more abstract like the remote control will give the user a more realistic experience and therefore, better training.
+
+~\\
+One of the things we mainly liked about this idea is that once a traffic simulation is in place, it would be relatively easy to implement the same concept for a different kind of vehicle.
+
+~\\
+For instance, if a driving-school wanted to create a car-driver simulator, all that would be necessary is to change the lane that would be used and create a physical car-model for the user to occupy.
+
+~\\
+Also, we think that implementing this idea would showcase the Room's potential as an educating tool, rather than just an entertainment-machine.
+
+\newpage
+\phantomsection
+\subsubsection*{Implementation challenges}
+%bike physics
+%bike interaction
+%screen distance when looking?
+~\\
+The largest challenge for this idea lies in the bike itself. Either hooking up the bike to the system directly or providing a way for the tracker sensors to use it's movements as input will be quite hard. 
+
+~\\
+Also, in order for the simulation to be safe the bike would have to be relatively statically placed, with its' wheels off the ground and the bike itself unable to roll sideways. 
+
+~\\
+This last safety requirement will however also affect the simulation negatively since in real life, whenever one wants to take a turn on a bike, it is necessary to both move the handlebars as well as lean sideways a bit, especially when taking sharp corners.
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\section*{References}
+\begin{description}
+\item [[ 1]]  Temple Run. [DIGITAL]. United States of America: Imangi Studios, 2011.
+\item [[ 2]] M. Back, "Fietsers steeds groter aandeel aantal dodelijke verkeersslachtoffers," in nrc.nl, 2015. [Online]. 
+Available: http://www.nrc.nl/nieuws/2015/04/30/fietsers-steeds-groter-aandeel-aantal-dodelijke-verkeersslachtoffers. Accessed: Jun. 18, 2016.
+\end{description}
+
+
+
+\end{document}
