@@ -1,0 +1,177 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+%%%BEGIN Article customizations
+%Set font, font size and char encoding
+\documentclass[11pt]{article} 
+
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{xcolor}
+\usepackage{lastpage}
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} 
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} 
+% (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+
+
+\title{\Huge Internship Project Proposal: The puzzle room}
+\author{Steven Schenk \& Robert Kraaijeveld \& Cees-Jan Nolen\\
+	Institute for Communication, Media and Information technologies\\
+	Hogeschool Rotterdam
+	Rotterdam, Zuid-Holland, The Netherlands \\
+	}
+\begin{document}
+\nocite{*}
+\maketitle
+\lhead{Internship Project Proposal: The puzzle room}
+\rhead{}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage\ of \pageref*{LastPage}}
+
+\newpage
+\tableofcontents
+\pagebreak
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction}
+For our internship, we wanted to create an innovative new application for the 'Experience Room' of the University of Tilburg. The first three proposals that we came up with were the following.
+
+\begin{enumerate}
+\item A fitness excersise in which the player has to dodge objects being fired at them from the four walls by fysically moving around, ducking and jumping.
+\item A puzzle game in which the player, or a group of players, solve puzzles located on and around the walls of the room.
+\item A traffic simulation, designed to help beginning cyclists navigate the perilous dutch traffic.
+\end{enumerate}
+
+~\\
+After some discussion, we decided that implementing proposal 2 would be the most beneficial to us and the University. Proposal 2 is not so difficult to implement that it would be impossible for the three of us, but neither is it so easy that it could be done within a few weeks. Also, this proposal has some interesting potential for extension, both from a technical- and gameplay-perspective. 
+
+~\\
+In this document, we will outline this proposal in some more detail. Obviously, we cannot fully fill in all the blanks. There are also a few choices that we have not made yet, but we hope that this proposal can at the very least shed some light on the application that we hope to develop for the University.
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Outline of the 'Escape the room' application}
+\section*{Outline of the 'Escape the room' application}
+
+
+\subsection*{General flow of the game}
+The general idea of the game is that of a room, in which the player(s) have to solve puzzles under various stipulations in order to escape and beat the game. 'Escape rooms' have been a regular phenomenon in both the digital and the physical entertainment industry, starting with point-and-click games such as 'The crimson Room' [1].
+
+
+~\\
+The puzzles that players have to solve ought to be very varied, especially if the game is to be played with more than one player at once. In this way, not only will the experience of the room vary each time, different kind of players will also get a different kind of challenge. 
+
+~\\
+For instance, a CS student and a History student might play the game together. Whilst the CS student will concentrate on puzzles requiring mathematical questions to be answered, like completing a fibonacci sequence or picking out numbers that are primes, the history student might turn his attention to a puzzle challenging him to complete a sequence of the bayeux tapestry.
+
+~\\
+ 'Deeper' puzzles are also possible, with certain hints being given in a cryptic manner. This method could also be used to give the experience a bit of context, as is done commonly in puzzle games such as 'Amnesia: The Dark Descent' [2] and similar games.  An example would be a part of the wall might contain a scribbled poetic phrase containing hints to solve another puzzle ("A robin redbreast in a cage puts all heaven in a rage" hinting the players to press red bird like square in a picture puzzle for instance.). Multiple of such hint-puzzle combinations could be used to create something of a narrative. 
+
+~\\
+These are just examples with little depth to them, but we think that providing a varied puzzle-choice will make the game more enjoyable for different kinds of players. In order to make the experience more challenging, certain conditions and stipulations need to be added. 
+
+~\\
+Puzzles involving active co-operation would make working together as a team more beneficial for the players. From something simple like pulling a digital lever together or synchronously pressing a button to one puzzles output being the input for another puzzle, or solving puzzles being rewarded with hints for unsolved riddles etc. 
+
+~\\
+A no-brainer would be a time-limit; being forced to think under pressure will increase the tension and immersion of the game. After all, what challenge is there to be had if the player(s) can just endlessly try combinations until something works?
+
+~\\
+\newpage
+More interesting conditions might be penalties for failed puzzles, environmental conditions like forcing the players to duck down, etc. These conditions will not only make the game more challenging, but will also make sure that this project fully utilizes the unique environment that the experience room provides.
+
+
+\newpage
+\phantomsection
+\subsection*{Benefit of creating this application}
+We see a threefold benefit in the creation of this application. 
+
+~\\
+Firstly, it would be an easy demonstration of the multi-facetedness of the experience room. A relatively fast-paced puzzle game shows that not all virtual reality games fit within the categories of shooter or fitness excersise. A quick 5 minute escape-sequence would also be easily demonstratable to an audience.
+
+~\\
+Secondly, this proposal could be a hybrid of fun and serious game. Especially if the game centers around a multiplayer option, the game could be a potential teambuilding excersise as well as a fun game. This might make the proposal more commercially interesting.
+
+~\\
+And finally, this proposal would tie in nicely with research into procedural generation and datamining currently being done at the University. 
+
+
+\subsection*{Technical aspects}
+The technical focus of this proposal will shift depending on wether the game takes on a single- or multiplayer-focus. If the game will be more singe-player focused, immersion will be key. Therefore, such a project should make maximum use of the 3D ability of the room, making the player look all around the walls and manipulate objects in order to find clues. Puzzles incorportating co-operation would of course be forfeit within such an application. 
+
+~\\
+On the other hand, if we were to implement a multiplayer game a lot of aspects would change. Fully utilising 3D would become difficult, since these projections would look distorted safe for one person wearing the 'master' 3D glasses. Therefore, the game would become more about co-operative puzzle solving, as well as different puzzles being made for different players. Clue-hunting would be more difficult.
+
+~\\
+Regardless of which direction we go with this matter, the game will need to have procedurally generated content in order to make the game sufficiently replayable. Also, it would be very interesting to collect data on subjects such as the time that is taken to complete certain puzzles or categories of puzzles. This would be very interesting research data, as well as a potentially usefull tool to create a bigger challenge for certain players or certain puzzle categories.
+
+
+\newpage
+\phantomsection
+\subsection*{Undecided issues and limitations}
+As mentioned earlier, a big question surrounding this proposal is wether we want this application to be multiplayer or singleplayer-focus. After some discussion, we as a team decided that we personally consider this proposal to be better suited to a multiplayer environment. Multiplayer makes the game more co-operation focused, making the game available for more uses than just entertainment. Therewithal, co-operation is in our opinion a core functionality of Escape Room. If you scrap it, it is just another puzzle game. 
+
+~\\
+However, multiplayer mode has some side effects when it comes to 3D graphics. The DAF Technologie Lab is only capable of rendering viewing angle related 3D objects for a single person. This implies that it is not possible to make the 3D objects matching with multiple viewing angles. So, basic 3D graphics are possible, it is just not possible to make people look under a table without getting odd graphics for the other people in the room. 
+
+~\\
+Another issue is the ability to track the movement of multiple people in the room. At the moment it is only possible to track the movement of a single person. Fortunately, sensors that are capable of tracking the movement of multiple persons will be added to the lab. Hopefully, these sensors are there in time, before we need them. If not, then we have to use other sensors like Microsoft Kinect for example. 
+
+~\\
+A potential addition could be making the full 3D-aspect an optional improvement for use in singeplayer only.This would be difficult, considering that we potentially would have to make some of the puzzles incorporate 3D elements they didn't have before, but it also would make playing the game by yourself more interesting, rather than it just being a reskin of the multiplayer version. 
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\section*{References}
+\begin{enumerate}
+\item T. Takagi, "Crimson Room," 2004. [Online]. Available: http://www.crimson-room.net/. Accessed: Jul. 18, 2016.
+\item Amnesia: The Dark Descent. Helsingborg: Frictional Games, 2010.	
+\end{enumerate}
+
+
+
+\end{document}
