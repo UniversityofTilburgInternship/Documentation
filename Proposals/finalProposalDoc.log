@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.5.19)  20 JUL 2016 14:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.5.19)  20 JUL 2016 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -797,26 +797,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
+[2] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-[4] [5] [6] [7] 
+[5] [6] [7] [8] 
 AED: lastpage setting LastPage
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
+[9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 180.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
  (./finalProposalDoc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 180.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
 Package rerunfilecheck Info: File `finalProposalDoc.out' has not changed.
 (rerunfilecheck)             Checksum: DA59A8AB2387F775D1D6B89679C2D65B;175.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
  ) 
 Here is how much of TeX's memory you used:
- 8316 strings out of 493027
- 124074 string characters out of 6132712
+ 8317 strings out of 493027
+ 124080 string characters out of 6132712
  227252 words of memory out of 5000000
  11735 multiletter control sequences out of 15000+600000
  10312 words of font info for 36 fonts, out of 8000000 for 9000
@@ -827,10 +831,10 @@ fb><e:/Hogeschool/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
 pfb><e:/Hogeschool/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
 .pfb><e:/Hogeschool/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
 12.pfb>
-Output written on finalProposalDoc.pdf (8 pages, 71110 bytes).
+Output written on finalProposalDoc.pdf (9 pages, 72024 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
- 27 named destinations out of 1000 (max. 500000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
+ 28 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
