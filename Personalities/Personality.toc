@@ -1,1 +1,2 @@
-\contentsline {section}{\numberline {1}Extraversion}{2}
+\contentsline {section}{\numberline {1}Introversion}{2}
+\contentsline {section}{\numberline {2}Extraversion}{2}
