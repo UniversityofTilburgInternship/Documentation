@@ -3,3 +3,5 @@
 \contentsline {section}{\numberline {3}Algorithm structure for a single character}{4}
 \contentsline {subsection}{\numberline {3.1}Change in the behavior of an NPC}{5}
 \contentsline {subsection}{\numberline {3.2}Our personality models of choice}{6}
+\contentsline {subsection}{\numberline {3.3}Algorithm structure}{7}
+\contentsline {section}{\numberline {4}Interaction between NPC's}{9}

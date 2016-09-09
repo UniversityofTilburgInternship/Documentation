@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  8 SEP 2016 15:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  9 SEP 2016 16:01
 entering extended mode
 **C:/Programming/Projects/Stage/documentation/ArchitectureDocument/Architecture
 Doc.tex
@@ -70,34 +70,90 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 (C:\Programming\MiscTools\MikTex\tex\latex\ltxmisc\parskip.sty
 Package: parskip 2001/04/09 non-zero parskip adjustments
 )
-(ArchitectureDoc.aux)
+(C:\Programming\MiscTools\MikTex\tex\latex\algorithm2e\algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count88
+
+(C:\Programming\MiscTools\MikTex\tex\latex\base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip52
+
+(C:\Programming\MiscTools\MikTex\tex\latex\tools\xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(C:\Programming\MiscTools\MikTex\tex\latex\ltxmisc\relsize.sty
+Package: relsize 2003/07/04 ver 3.1
+)
+********************************************************
+Package `algorithm2e' Release 5.1 -- october 19 2015 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (christophe.fiorio@umontpellier.fr)
+********************************************************
+\skiptotal=\skip53
+\skiplinenumber=\skip54
+\skiprule=\skip55
+\skiphlne=\skip56
+\skiptext=\skip57
+\skiplength=\skip58
+\algomargin=\skip59
+\skipalgocfslide=\skip60
+\algowidth=\dimen105
+\inoutsize=\dimen106
+\inoutindent=\dimen107
+\interspacetitleruled=\dimen108
+\interspacealgoruled=\dimen109
+\interspacetitleboxruled=\dimen110
+\algocf@ruledwidth=\skip61
+\algocf@inoutbox=\box26
+\algocf@inputbox=\box27
+\AlCapSkip=\skip62
+\AlCapHSkip=\skip63
+\algoskipindent=\skip64
+\algocf@nlbox=\box28
+\algocf@hangingbox=\box29
+\algocf@untilbox=\box30
+\algocf@skipuntil=\skip65
+\algocf@capbox=\box31
+\algoheightruledefault=\skip66
+\algoheightrule=\skip67
+\algotitleheightruledefault=\skip68
+\algotitleheightrule=\skip69
+\c@algocfline=\count89
+\c@algocfproc=\count90
+\c@algocf=\count91
+\algocf@algoframe=\box32
+\algocf@algobox=\box33
+) (ArchitectureDoc.aux)
 \openout1 = `ArchitectureDoc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 (C:\Programming\MiscTools\MikTex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count88
-\scratchdimen=\dimen105
-\scratchbox=\box26
-\nofMPsegments=\count89
-\nofMParguments=\count90
+\scratchcounter=\count92
+\scratchdimen=\dimen111
+\scratchbox=\box34
+\nofMPsegments=\count93
+\nofMParguments=\count94
 \everyMPshowfont=\toks15
-\MPscratchCnt=\count91
-\MPscratchDim=\dimen106
-\MPnumerator=\count92
-\makeMPintoPDFobject=\count93
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen112
+\MPnumerator=\count96
+\makeMPintoPDFobject=\count97
 \everyMPtoPDFconversion=\toks16
 ) (C:\Programming\MiscTools\MikTex\tex\generic\oberdiek\pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -145,11 +201,11 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 17.
+(Font)              <12> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 17.
+(Font)              <8> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 17.
+(Font)              <6> on input line 18.
  [1
 
 {C:/Users/Robert/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
@@ -166,53 +222,48 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: ER.png Graphic file (type png)
 
 <use ER.png>
-Package pdftex.def Info: ER.png used on input line 35.
+Package pdftex.def Info: ER.png used on input line 36.
 (pdftex.def)             Requested size: 482.9979pt x 171.56114pt.
 
-Overfull \hbox (137.9979pt too wide) in paragraph at lines 35--36
+Overfull \hbox (137.9979pt too wide) in paragraph at lines 36--37
 [][] 
  []
 
 [3 <./ER.png>] [4] [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 79.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 81.
 
 (C:\Programming\MiscTools\MikTex\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 81.
+ [6] [7] [8] [9]
+(ArchitectureDoc.aux) )
+(\end occurred inside a group at level 1)
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-[]\OT1/cmr/m/n/10 Thoroughness vs.
- []
-
-
-Underfull \hbox (badness 5622) in paragraph at lines 97--98
-[]\OT1/cmr/m/n/10 Emotional Sta-bil-ity vs.
- []
-
-[6] (ArchitectureDoc.aux) ) 
+### simple group (level 1) entered at line 1061 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 1655 strings out of 493334
- 23411 string characters out of 3137554
- 84281 words of memory out of 3000000
- 5181 multiletter control sequences out of 15000+200000
+ 2610 strings out of 493334
+ 38677 string characters out of 3137554
+ 110409 words of memory out of 3000000
+ 6123 multiletter control sequences out of 15000+200000
  8248 words of font info for 29 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,10n,43p,788b,227s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Programming/MiscTools/MikTex/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb><C:/Programming/MiscTools/MikTex/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb><C:/Programming/MiscTools/MikTex/fonts/type1/public/amsfonts
-/cm/cmr10.pfb><C:/Programming/MiscTools/MikTex/fonts/type1/public/amsfonts/cm/c
-mr12.pfb><C:/Programming/MiscTools/MikTex/fonts/type1/public/amsfonts/cm/cmr17.
-pfb><C:/Programming/MiscTools/MikTex/fonts/type1/public/amsfonts/cm/cmr6.pfb><C
-:/Programming/MiscTools/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Prog
-ramming/MiscTools/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Programmin
-g/MiscTools/MikTex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Programming/Mi
-scTools/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on ArchitectureDoc.pdf (7 pages, 163400 bytes).
+ 40i,10n,43p,804b,1840s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Programming/MiscTools/MikTex/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb><C:/Programming/MiscTools/MikTex/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb><C:/Programming/MiscTools/MikTex/fonts/type1/public/amsfonts/cm/cmr10.p
+fb><C:/Programming/MiscTools/MikTex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
+:/Programming/MiscTools/MikTex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pro
+gramming/MiscTools/MikTex/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Programmi
+ng/MiscTools/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Programming/Mis
+cTools/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Programming/MiscTools
+/MikTex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Programming/MiscTools/Mik
+Tex/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on ArchitectureDoc.pdf (10 pages, 174730 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
