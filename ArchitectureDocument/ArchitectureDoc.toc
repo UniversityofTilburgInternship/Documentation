@@ -5,3 +5,4 @@
 \contentsline {subsection}{\numberline {3.2}Our personality models of choice}{6}
 \contentsline {subsection}{\numberline {3.3}Algorithm structure}{7}
 \contentsline {section}{\numberline {4}Interaction between NPC's}{9}
+\contentsline {section}{\numberline {5}Demonstrating the NPC's}{10}
