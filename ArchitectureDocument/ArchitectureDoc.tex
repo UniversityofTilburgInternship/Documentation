@@ -103,30 +103,15 @@
 
     Each frame, there will be a check to see wether the NPC is in the vicinity of an event. If so, the algorithm will do the following:
 
-    \begin{enumerate}
-    	\item Get the greatest personality factor of the NPC that is greater than its' equivalent threshold in the event. If there is not a single personality factor of the NPC larger than its' equivalent threshold, stop: The NPC doesn't react to the event.
-    	\item Get the event behaviors belonging to the resulting personality factor of step 1, if there is any result. 
-    	\item Determine which of the behaviors to trigger using the personality factors' value. (IE. a 100 percent egoism value would warrant a very egoistic behavior, etc.)
-    	\item Trigger the behavior.
-    \end{enumerate}
-
-    If on the other hand, there is no event within the vicinity of the NPC, every 5 seconds or so the algorithm will do the following:
-
-    \begin{enumerate}
-    	\item Sum all of the personality factor values. 
-    	\item For each of the personality factors, compute the chance of the behavior relevant to this factor will be triggered: Divide the personality factor value by the result of step 1.
-    	\item Order the personality factors by their chance values, starting with the biggest chance. (For instance: Egoism has chance value 30, so gets the first place, Extraversion has chance value 20, so gets the second place, etc.)
-    	\item Generate a random number from 0 to 100: Get the personality factor in whose spot the number is. (For instance: If the resulting number is 40, extraversion will be chosen since 0-30 was covered by egoism, and 30-50 was covered by extraversion.)
-    	\item Get the personality factor score, NOT the chance value, for the chosen factor and trigger the behavior relevant to that score.
-    \end{enumerate}
- 
-    %PSEUDOCODE   
+	%UPDATE THE ALGORITHMS
 
 	\newpage
 	\section{Interaction between NPC's}
 	In order to create a realistic feeling for the player, there also needs to be interaction between the different NPC's, rather than just single NPC's displaying behaviors. One way to do this would be in the form of mini-events between NPC's that only occur when NPC's get within a certain range of eachother. 
 
-	%limited to 2 npc's?
+	%MORE NPCs
+%FRIENDS?
+%MEMORY FOR NPC?
 	A very basic event that might happen when two NPC's enter each others' personal space is that one of them might try to begin a conversation, if his personality scores \footnote{Within the Big-5 model, Extraversion vs. Introversion and Emotional Stability vs. Neuroticism are the most likely candidates for this task.} allow him to. Depending on the personality scores of the other NPC, he/she might accept the invitation. During the conversation, the body language, speech patterns and facial expressions of both NPC's will be governed by their relevant personality scores, like we talked about in the previous section.
 
 	Another simple interaction which would only involve 2 NPC's at a time would be navigation: When an NPC navigates a crowd of other NPC's, they might back away from him or hold their   ground, depending once again upon certain of their personality scores. This very simple measure would create a more realistic representation of a crowd or group of actual humans.
