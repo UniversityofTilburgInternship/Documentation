@@ -170,8 +170,21 @@ Firstly, that Casanova only executes the first few actions in the resulting acti
 Secondly, that an NPC's experiences changes his later behavior. %ADD MORE, WHY DO WE WANT THIS?
 The 10 second time-mark can of course be altered, and we are still experimenting with different time thresholds in order to create the most realistic behavior.
 
+
 \newpage
 \subsection{Events}
+In order to make our game environment more lifelike, we want to use events: Occurences that prompt an instance reaction from NPC's near them. Examples of this could be alarms sounding, NPC's fainting or more happy events like confetti suddenly appearing. This will provide some diversion to the game, as well as provide the player with a much more clear way to spot NPC personalities.
+
+~\\
+Events are, in their most basic form, radiuses. When an NPC enters an event radius or happens to be there when an event is spawned, the NPC will instantly be prompted to react to the event
+
+~\\
+We decided to create a separate collection of event-actions in order to allow an NPC to react in a different way than usual to an event. This makes sense considering an NPC's reaction to an alarm sounding would not be to grab him/herself a cup of coffee.
+Since the algorithms discussed above are relatively generic, we can easily re-use these algorithms to create and weigh a graph of event-actions.  
+
+This is done in the following way:
+
+In the Casanova code, we spawn a random event. This is usually done after a certain time interval. 
 
 
 
