@@ -4,3 +4,7 @@
 \contentsline {section}{\numberline {4}General System Structure}{5}
 \contentsline {section}{\numberline {5}NPC behavior}{6}
 \contentsline {subsection}{\numberline {5.1}Actions and graph creation algorithm}{6}
+\contentsline {subsection}{\numberline {5.2}Events}{8}
+\contentsline {section}{\numberline {6}Emotions}{10}
+\contentsline {section}{\numberline {7}Player interaction}{11}
+\contentsline {section}{\numberline {8}Other improvements}{12}

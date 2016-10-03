@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.25)  28 SEP 2016 15:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.25)  3 OCT 2016 16:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -671,25 +671,26 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
- [4] [5] [6] [7]
-(./planningAndTechnicalSetup.aux) ) 
+ [4] [5] [6] [7] [8]
+[9] [10] [11] [12] [13] (./planningAndTechnicalSetup.aux) ) 
 Here is how much of TeX's memory you used:
  4308 strings out of 493013
  63899 string characters out of 6136993
- 137037 words of memory out of 5000000
+ 139037 words of memory out of 5000000
  7790 multiletter control sequences out of 15000+600000
  10013 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,43p,858b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2016/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
-.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on planningAndTechnicalSetup.pdf (8 pages, 73930 bytes).
+ 44i,10n,43p,905b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2016/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmss12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb>
+Output written on planningAndTechnicalSetup.pdf (14 pages, 82118 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
