@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.25)  3 OCT 2016 16:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.25)  4 OCT 2016 11:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -662,35 +662,89 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `planningAndTechnicalSetup.toc'.
 
- [1] [2] [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 108.
+ [1] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
 
+ []
 
-(c:/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+<proxySystem.png, id=16, 715.17188pt x 341.77687pt>
+File: proxySystem.png Graphic file (type png)
+ <use proxySystem.png>
+Package pdftex.def Info: proxySystem.png used on input line 86.
+(pdftex.def)             Requested size: 357.58505pt x 170.88802pt.
+
+[3 <./proxySystem.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 111.
+
+ (c:/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
- [4] [5] [6] [7] [8]
-[9] [10] [11] [12] [13] (./planningAndTechnicalSetup.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 111.
+
+[4] <SystemEr.png, id=26, 1103.62312pt x 747.54282pt>
+File: SystemEr.png Graphic file (type png)
+ <use SystemEr.png>
+Package pdftex.def Info: SystemEr.png used on input line 125.
+(pdftex.def)             Requested size: 569.07112pt x 369.88086pt.
+
+Overfull \hbox (150.81744pt too wide) in paragraph at lines 124--127
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
+
+ []
+
+[5 <./SystemEr.png>] [6] [7] [8] [9] [10] [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+
+ []
+
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+[16]
+Overfull \hbox (53.21005pt too wide) in paragraph at lines 287--301
+[] 
+ []
+
+[17] (./planningAndTechnicalSetup.aux) ) 
 Here is how much of TeX's memory you used:
- 4308 strings out of 493013
- 63899 string characters out of 6136993
- 139037 words of memory out of 5000000
- 7790 multiletter control sequences out of 15000+600000
+ 4319 strings out of 493013
+ 64076 string characters out of 6136993
+ 138037 words of memory out of 5000000
+ 7798 multiletter control sequences out of 15000+600000
  10013 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,43p,905b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2016/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr17.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmss12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb>
-Output written on planningAndTechnicalSetup.pdf (14 pages, 82118 bytes).
+ 44i,10n,43p,969b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2016/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr17.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb
+><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on planningAndTechnicalSetup.pdf (18 pages, 183324 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
