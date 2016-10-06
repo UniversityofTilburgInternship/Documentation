@@ -1,0 +1,5 @@
+\contentsline {section}{Introduction}{3}{section*.2}
+\contentsline {section}{Outline of the procedural avatar generation tool/application}{4}{section*.4}
+\contentsline {section}{Benefit of creating this application}{6}{section*.7}
+\contentsline {section}{Budget plan}{7}{section*.9}
+\contentsline {section}{References}{8}{section*.11}

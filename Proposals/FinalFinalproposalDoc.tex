@@ -73,6 +73,7 @@
 \tableofcontents
 \pagebreak
 
+%DONE
 \newpage
 \phantomsection
 \addcontentsline{toc}{section}{Introduction}
@@ -83,8 +84,7 @@ Originally, we wanted to create an 'escape the room'-style puzzle game for Tilbu
 We could have collaborated with them or found some other way of implementing our original concept, but we wanted to avoid any overlap with the aforementioned project; therefore, we decided to create a different application altogether.
 
 ~\\
-Our new concept consists of a tool allowing for the easy creation of in-game avatars with procedurally generated personalities within Unity. If we have enough time left, we are going to incorporate this principle into a restaurant-style 1 player game within the experience room.
-
+Our new concept consists of a tool allowing for the easy creation of in-game avatars with procedurally generated personalities within Unity. We will prove this tool's capabilities in a demo-game for the mixed reality room.
 ~\\
 Procedural generation is widely used in the games industry, from fully procedurally generated games like Spore and Minecraft to games like GTA 5 and the recently released No Man's Sky that use procedural generation only for certain tasks like character creation.
 
@@ -100,22 +100,36 @@ The first part consists of a tool, or set of tools, designed to allow Unity deve
 
 ~\\
 Having life-like avatars is a huge factor in player immersion. Especially in games where there is a lot of direct player to avatar interaction, like job simulators and open world games, having avatars walk, talk and act in distinctive and lifelike ways is very important for creating an immersive experience. 
-REFERENCE
 
 ~\\
-Therefore, we want to focus our attention to the procedural generation of character personality. Procedural avatar generation is, like we mentioned earlier, used widely in the creation of games. However, the use of personality generation is less widespread. (With a few exceptions, such as Crusader Kings II REFERENCE). When used, however, it has the potential to greatly increase the players immersion in a video game by increasing replayability. More on this in the next chapter.
+Therefore, we want to focus our attention to the procedural generation of character personality. Procedural avatar generation is, like we mentioned earlier, used widely in the creation of games. However, the use of personality generation is less widespread. (With a few exceptions, such as Crusader Kings II [3]). When used, however, it has the potential to greatly increase the players immersion in a video game by increasing replayability. More on this in the next chapter.
+
+~\\
+The generation process will have to be customizable to fit each individual developers' needs. We want our tool to offer the developer different options for character generation; Clothing and other appearance-related factors are of course a must-have in order to allow the developer to create certain demographics or different kinds of people. 
+
+~\\
+Since personality generation is our biggest feature for this tool, we want to offer users several ways of generating personalities for their avatars. We want game-creators to be able to create both highly detailed A good starting point is 'the big 5': These adjectives model a person's openness, conscientiousness, extraversion, agreeableness en neuroticism. In practice, we would allow the developer to manipulate values or ranges of values associated with either end of each of the adjectives (For instance, conscientiousness ranging from 0 to 100, where low values would create a very unhelpfull and high values creating a very cooperative NPC).
+
+~\\
+A more complex version of the big 5 personality scale is HEXACO. It contains, with some additions, the same kind of factors (called domains) as the big 5 personality scale but it incorporates separate sub-factors which could be very easily worked into actual game-behavior. For example, the emotionality domain has among others the fearfullness factor, which rates fear of injury and/or pain. In practice, this would entail that a character with a low fearfullness factor would not back down from (physical) conflict with the player or with other NPC's.
+
+\newpage
+\phantomsection
+~\\
+Another promising type of personality test is the 16PF questionnaire, which measures 16 abstract personality traits and identifies what high or low scores for each trait would mean in terms of practical behavior. This test is in our opinion more usefull within the context of 'social' games; Its' traits are more centered around social interaction rather than factors like agressivity or fearfullness.
+
+~\\
+Ideally, we would want to incorporate multiple kind of personality measurements into our tool to allow developers to fine-tune their characters to the different kinds of games that hey are creating.
 
 ~\\
 For such a tool to be useful to developers, it would have to be easily usable within development environments. Since we are focusing on Unity with this project, easy integration into Unity is a must-have for this tool.
 
 ~\\
-The second part of this project, which we consider partially optional, is to prove the worth of our tool within an actual game. More specifically, a restaurant-game set within the Experience Room.
+The second part of this project will be some kind of demonstration of the capabilities of our tool. It would be best if this demo would consist of a game for the Mixed Reality room, which could then also demonstrate it's immersive capabilities. A fun way of testing wether or not the avatars are actually recognized as having different characters from another would be with a game in which the player has to point out these differences. A very simple example would be to create a large group of avatars with different values on a certain personality trait, and let the player pick out the avatar who he/she believes expresses this trait the most. This could also be a useful to test how noticeable certain traits are over other; agressivity should be relatively obvious, but generosity should be harder to spot.
 
 ~\\
-This game will let the players digitally prepare and serve food for our procedurally generated avatars. Having avatars with different distinct, noticeable personalities and characteristics will both make the game feel more realistic as well as provide additional game-elements. For instance, an avatar with a certain personality might throw a fit when his food is delivered late, leading to other avatars leaving or players being delayed.
+Other, more in-depth possibilities for a demo include having the player take on the role of a 'profiler' who has to spot a criminal from his behaviour within a crowd, or having the player interrogate avatars with distinct personalities. In both of these ideas, especially the last one, we could easily change the personality of the 'target' using our tool and therefore make the game harder or easier.
 
-~\\
-This would be a great way to demonstrate the power of procedurally generated avatars, if we have enough time.
 
 \newpage
 \phantomsection
@@ -127,10 +141,10 @@ The obvious benefit to developers that this tool will deliver is enabling them t
 A boon for players would be increased replayability. Having NPC's with different personalities and therefore, different decision-making processes populate a gameworld will ensure that every replay is different from the last one. The process of making games more replayable by changing variables upon each playthrough is known as randomization; randomization's value and the importance of replayability has been demonstrated in various both academic research projects such as [1] and [2].
 
 ~\\
-This replayability-component could also provide an incentive for community activity, as illustrated with the earlier mentioned Crusader Kings II. In this game, players control a medieval dynasty, controlling one reigning family-member at a time. 
+This replayability-component could also provide an incentive for community activity, as illustrated with the earlier mentioned Crusader Kings II [3]. In this game, players control a medieval dynasty, controlling one reigning family-member at a time. 
 
 ~\\
-These characters are procedurally generated and the different personality traits of all the player- and non-player characters combined can lead to incredibly complex situations. The complexity of the game itself, combined with the endless amount of situations that can occur have sparked a lot of forum discussions and community-building actions by players. Our tool, if it is to see the light of day, could empower developers wanting to create similar avatar-driven games.
+These characters are procedurally generated and the different personality traits of all the player- and non-player characters combined can lead to incredibly complex situations. The complexity of the game itself, combined with the endless amount of situations that can occur have sparked a lot of forum discussions and community-building actions by players. Our tool could empower developers wanting to create similar avatar-driven games.
 
 ~\\
 We do however, think that the use of this tool would be most valuable within the context of open world games, or other types of games players have a large amount of interaction with npc's. Games that have little player-npc interaction or more accurately, social interaction \footnote{For instance, shooting enemy soldier npc's is technically interaction, but certainly not social interaction.}, will benefit less from using this tool since the player will simply not notice the NPC's behaviour; he or she will most likely be to busy performing other tasks.
@@ -138,18 +152,12 @@ We do however, think that the use of this tool would be most valuable within the
 
 \newpage
 \phantomsection
-\addcontentsline{toc}{section}{Undecided issues and limitations}
-\subsection*{Undecided issues and limitations}
-A possible risk might be that we run of time with this project before we are able to prove our concept by creating a demo-game. Our internship will only last for approx. 6 months and we are new to procedural avatar generation, so it's likely that we will spend the majority of our time working on our procedural generation tool; Leaving little time for the creation of an implementation making use of the tool.
-
-newpage
-\phantomsection
 \addcontentsline{toc}{section}{Budget plan}
 \subsection*{Budget plan}
 Finally, we will propose what we consider to be an adequate budget for this project. Because we want to learn as much as possible during this program, we will only be spending money on goods which would take us to long to create for ourselves; art assets. 
 
 ~\\
-Specifically, we want to purchase two 3d model packs \footnote{These are the 'Real People: Males' and 'Real People: Females' packs, available at the Unity Asset Store.}, consisting of approx. 60 different models each. These will come in the shape of both Unity prefabs and materials, so we can easily customize their texture colors and edit for example, faces, as we choose. They are also compatible with Unity's mecanim system, meaning we will easily be able to create and edit our own animations and apply them to these character models.
+Specifically, we want to purchase two 3d model packs \footnote{These are the 'Real People: Males' and 'Real People: Females' packs, available at the Unity Asset Store}, consisting of approx. 60 different models each. These will come in the shape of both Unity prefabs and materials, so we can easily customize their texture colors and edit for example, faces, as we choose. They are also compatible with Unity's mecanim system, meaning we will easily be able to create and edit our own animations and apply them to these character models.
 
 ~\\
 These two packs combined will cost 198 US Dollar.
@@ -161,11 +169,16 @@ We decided not to spend any money on hardware like Kinects for use in the experi
 \phantomsection
 \addcontentsline{toc}{section}{References}
 \section*{References}
-\begin{}
-\item{ [1] T. Frattesi, D. Griesbach, J. Leith, T. Shaffer, and A. Jennifer, "Replayability of video games," 2011. [Online]. Available: http://www.wpi.edu/Pubs/E-project/Available/E-project-051711-130604/unrestricted/Replayability\_of\_Video\_Games\_2011.pdf. Accessed: Aug. 19, 2016.}
+\begin{enumerate}
+\item{ [1] T. Frattesi, D. Griesbach, J. Leith, T. Shaffer, and A. Jennifer, "Replayability of video games," 2011. [Online]. Available: http://www.wpi.edu/Pubs/E-project/Available/E-project-051711-130604/unrestricted/Replayability\_of\_Video\_Games\_2011.pdf. Accessed: Aug. 19, 2016. 
+}
 
 \item{
 [2]	M. Van Lent, M. O. Riedl, P. Carpenter, R. Mcalinden, and P. Brobst, "Increasing Replayability with deliberative and Reactive planning," 2005. [Online]. Available: http://www.aaai.org/Papers/AIIDE/2005/AIIDE05-023.pdf. Accessed: Aug. 19, 2016.	}
+
+\item{
+[3] Crusader Kings 2 [DVD-ROM]. Sweden: Paradox Interactive, 2012
+}
 \end{enumerate}
 
 
