@@ -94,13 +94,15 @@ Casanova is a very high level language, capable of easily manipulating game stat
 ~\\
 
 \newpage
+\
 As mentioned earlier, we use various XML files to store information or settings relative to our game. In order to make editing these files (specifically, the XML file which actions an NPC can take) easier, especially for non-programmers, we have created a simple GUI for editing these files, which runs locally in the users browser. 
 
 ~\\
-This enables the user to easily edit the game settings without even having to pause the game. We implemented this editor in python, using the lightweight 'bottle' framework.
+\includegraphics[scale=0.3]{XmlSystem}
+~\\
 
 ~\\
-\includegraphics[scale=0.35]{XmlSystem}
+We implemented this editor in Python, using the lightweight 'Bottle' framework.
 
 \newpage
 \section{Our personality model}
@@ -163,14 +165,14 @@ If their emotionality threshold is exceeded, they will display very emotional be
 ~\\
 
 ~\\
-\includegraphics[scale=0.5]{SimsCrying}
+\includegraphics[scale=0.4]{SimsCrying}
 ~\\
 
 Finally, NPC's can react to (and display their personalities) through events: occurences which will trigger an immediate reaction from the NPC.
 ~\\
 
 ~\\
-\includegraphics[scale=0.3]{SimsFire}
+\includegraphics[scale=0.4]{SimsFire}
 ~\\
 
 ~\\
@@ -215,19 +217,25 @@ Very important to note is that this first weighted graph, and only this first gr
 \newpage
 After the initial graph has been created and the NPC is spawned in the gameworld, a random action node is selected as a starting node. The starting node is added to the list of actions which will be passed to Casanova, and the NPC's accumulated values are summed with the action's modifier values. 
 
-%IMAGE
-
+~\\
+\includegraphics[width=17cm, height=7.5cm]{DecisionMakingAlgorithm}
 
 ~\\
 After that, the decision making algorithm marks the current node as 'visited', chooses the neighbour of the current action with the highest weight, sets it to be the new current action and adds it to the list of actions. The process then starts again with the new current node as starting node. 
 
 ~\\
 Note that given enough time, this algorithm will add each action in the graph to the list: The solution to this problem is described in the next page.
+
 \newpage
 Every 10 seconds of game-time Casanova requests a fresh list of actions from this algorithm. The Unity proxy responds to this request by re-creating the weighted graph, using the accumulated values from the previous actions instead of the fixed personality values of a NPC, like we mentioned earlier. This constant refreshing ensures two things: 
 
 ~\\
+\includegraphics[width=17cm, height=7.5cm]{AccumulatedValues}
+
+~\\
 Firstly, that Casanova only executes the first few actions in the resulting actions list, so that the NPC does not execute each piece of behavior in the graph (Which is not desirable, since then it would be impossible to see what kind of personality a given NPC possesses.). 
+
+~\\
 Secondly, that an NPC's experiences changes his later behavior by way of his/hers accumulated values. 
 The 10 second time-mark can of course be altered, and we are still experimenting with different time thresholds in order to create the most realistic behavior.
 
@@ -237,7 +245,7 @@ The 10 second time-mark can of course be altered, and we are still experimenting
 In order to make our game environment more lifelike, we want to use events: Occurences that prompt an instance reaction from NPC's near them. Examples of this could be alarms sounding, NPC's fainting or more happy events like confetti suddenly appearing. This will provide some diversion to the game, as well as provide the player with a much more clear way to spot NPC personalities.
 
 ~\\
-Events are, in their most basic form, radiuses. When an NPC enters an event radius or happens to be there when an event is spawned, the NPC will instantly be prompted to react to the event.
+\includegraphics[scale=0.7]{SimsFire2}
 
 ~\\
 We decided to create a separate collection of event-actions in order to allow an NPC to react in a different way than usual to an event. This makes sense considering an NPC's reaction to an alarm sounding would not be to grab him/herself a cup of coffee.
@@ -250,28 +258,50 @@ Each event has the following properties
 \item A name and an Id.
 \item Multiple variables concering the 'look and feel' of the event, including sounds and animations that should be played.
 \item A duration.
+\item An interest level minimum
 \item An origin position.
 \item A radius around this origin position.
 \end{enumerate}
+
+\newpage
+Events are, in their most basic form, radiuses. When an NPC enters an event radius or happens to be there when an event is spawned, the NPC will instantly be prompted to react to the event.
+Note that Events also have personality values of their own, which will be later used to calculate interest levels.
 
 ~\\
 When an NPC comes close enough to an event, he/she will react to it in a way that matches the personality values of said NPC. This is accomplished in the following way:
 
 ~\\
-In the Casanova code, we spawn a random event. This is done after a random time interval, making predicting when events will happen impossible for the player. Each NPC has a reference to the current active event (or, list, if there are multiple active events). When an NPC enters the radius of an event, the algorithm that we discussed in the last chapter will change its' input nodes from normal action nodes, like getting coffee, to ' event action nodes'; actions that can only be performed when an NPC is near an active event.
+\includegraphics[scale=0.4]{Event}
+
+~\\
+In the Casanova code, we spawn a random event. This is done after a random time interval, making predicting when events will happen impossible for the player. Each NPC has a reference to the current active event (or, list, if there are multiple active events).
+
+~\\
+When an NPC enters the radius of an event, the algorithm that we discussed in the last chapter will change its' input nodes from normal action nodes, like getting coffee, to ' event action nodes'; actions that can only be performed when an NPC is near an active event.
+
+
 
 \newpage
 This transition is done instantly, so that the NPC does not casually finish drinking his coffee before reacting to the fainted individual next to him. Also, since event action nodes use exactly the same kind of XML variables as normal action nodes, the same algorithm can be used for both categories of actions. 
 
 ~\\
-The duration property of the event determines, naturally, how long the event will be active.  
+The duration property of the event determines, naturally, how long the event will be active.
 
 ~\\
-At the moment of writing we are also working on having events dissapear naturally over time, by letting each event contain a property which measures the amount of NPC's that are attracted to the event and are performing event actions, as well as letting certain event actions speed up or slow down the dissapearance of the event. 
+An NPC is not obliged to react to an event. Just like in real life, not everything that happens around is us interesting enough for us to actively react to. Therefore, we compute an interest level for each NPC that enters an event radius, consisting of the result of the weighting algorithm on the personality values of the NPC and the personality, summed with 10 divided by the NPC's distance to the event and the amount of NPC's that are already reacting to the event.
+
+~\\
+\includegraphics[scale=0.4]{InterestLevel}
+~\\
+ If the NPC's computed interest level is greater than or equal to the minimum interest level of the event, he/she will switch to the event reaction nodes instead of the normal action nodes, and react to the event. If not, the NPC will simply continue to perform normal actions, therefore ignoring the event.
+
 
 \newpage
 \section{Emotions}
-We are currently researching how we can include emotion within our personality model, with the help of psychotherapist F. Steenbakkers, who is also a Phd candidate at the department for Clinical Psychology at Tilburg University. Ideally, we want the way in which NPC's decide what kind of behavior they will execute to be a close reflection of the way in which a real person does this; Personality models alone are not enough to accomplish this goal, so we hope that our cooperation with mr. Steenbakkers can lead us to a more realistic model for NPC behavior. 
+We are currently researching how we can include emotion within our personality model, with the help of psychotherapist F. Steenbakkers, who is also a Phd candidate at the department for Clinical Psychology at Tilburg University. 
+
+~\\
+Ideally, we want the way in which NPC's decide what kind of behavior they will execute to be a close reflection of the way in which a real person does this; Personality models alone are not enough to accomplish this goal, so we hope that our cooperation with mr. Steenbakkers can lead us to a more realistic model for NPC behavior. 
 
 ~\\
 Since we have, at the time of writing, only recently made contact with mr. Steenbakkers we do not have any major findings to report, but we will continue to work on integrating emotions and other psychological factors into our behavior model as this project goes along.
@@ -282,17 +312,40 @@ In our original Architecture Document, we included a few examples of demo-games 
 
 
 \subsection{Demo 1: Selecting certain NPC's}
-We intend to demonstrate this project by creating a game, or several games, in which player NPC interaction and NPC personalities will be key concepts. The simplest and probably most usefull kind of demo would be to have the player walk around a group of NPC's and have the player identify the NPC who exhibits a certain personality trait the strongest. This would be quite easy to implement: The only addition that is needed is for us to randomly select a certain trait, then store which NPC has the highest score on that trait. Finally, some controls for the player need to be added and the demo is ready. Because we use an XML file to store the ranges a certain personality trait may exhibit for a given NPC population, we can easily create multiple XML files storing various personality ranges and feed them as input to the game whenever we choose, providing us with an easy way of showcasing different NPC populations.
+We intend to demonstrate this project by creating a game, or several games, in which player NPC interaction and NPC personalities will be key concepts. The simplest and probably most usefull kind of demo would be to have the player walk around a group of NPC's and have the player identify the NPC who exhibits a certain personality trait the strongest. 
 
 ~\\
+This would be quite easy to implement: The only addition that is needed is for us to randomly select a certain trait, then store which NPC has the highest score on that trait. Finally, some controls for the player need to be added and the demo is ready. 
+
+~\\
+Because we use an XML file to store the ranges a certain personality trait may exhibit for a given NPC population, we can easily create multiple XML files storing various personality ranges and feed them as input to the game whenever we choose, providing us with an easy way of showcasing different NPC populations.
+
+\newpage
 \subsection{Demo 2: Interrogation game}
-%interrogation game
-A more complicated demonstration game would be to have the player interact one-on-one with an NPC within the context of an interrogation game. A possible way to implement this would be to have a certain NPC being suspected to have committed a certain crime, with the player tasked to ask questions about this crime and decide, based on the NPC's responses, body language and facial expression wether the NPC has committed the crime or not. This would require some extra additions to the vanilla concept, like generating random crimes, their circumstances and the NPC's degree of involvement in the crime. It might also require some more advanced facial animations in order to create a believable 'suspect'. If implemented well enough however, it might provide a very entertaining experience to the players. It might also provide data on wether the NPC's personalities can also shine through and be believable in a one-on-one situation.
+
+~\\
+\includegraphics[scale=0.7]{Interrogation}
+
+~\\
+A more complicated demonstration game would be to have the player interact one-on-one with an NPC within the context of an interrogation game. A possible way to implement this would be to have a certain NPC being suspected to have committed a certain crime, with the player tasked to ask questions about this crime and decide, based on the NPC's responses, body language and facial expression wether the NPC has committed the crime or not. 
+
+~\\
+This would require some extra additions to the vanilla concept, like generating random crimes, their circumstances and the NPC's degree of involvement in the crime. It might also require some more advanced facial animations in order to create a believable 'suspect'. If implemented well enough however, it might provide a very entertaining experience to the players. It might also provide data on wether the NPC's personalities can also shine through and be believable in a one-on-one situation.
 
 \newpage
 \subsection{Demo 3: Profiling challenge}
-%VIP protection
-Finally, we might expand on the first kind of demo by including more of a challenge factor. This could be done by giving the player a time limit to find an NPC with a certain trait-extreme or by giving a 'profiler' role to the player. This would involve the player having to pick out an NPC from a crowd who is most likely to be agressive or commit a crime, by carefully examining their behavior. This task can be made more challenging by giving the player only one chance: If they choose the wrong NPC, they lose instantly. This might require a more detailed personality model than our current one, which only measures 5 of the primary personality traits of humans. HEXACO, for example, includes factors like fear of physical pain, anxiety, patience etc. which could all be potential characteristics exhibited by criminals who are about to commit a crime.
+
+~\\
+\includegraphics[scale=0.3]{Hitman}
+
+~\\
+Finally, we might expand on the first kind of demo by including more of a challenge factor. This could be done by giving the player a time limit to find an NPC with a certain trait-extreme or by giving a 'profiler' role to the player. 
+
+~\\
+This would involve the player having to pick out an NPC from a crowd who is most likely to be agressive or commit a crime, by carefully examining their behavior. This task can be made more challenging by giving the player only one chance: If they choose the wrong NPC, they lose instantly. 
+
+~\\
+This might require a more detailed personality model than our current one, which only measures 5 of the primary personality traits of humans. HEXACO, for example, includes factors like fear of physical pain, anxiety, patience etc. which could all be potential characteristics exhibited by criminals who are about to commit a crime.
 
 ~\\
 Another variation on this 'spot the criminal'  idea could be having the character protect a VIP NPC; The player then has to pick out the non-VIP NPC most likely to harm the VIP, based on their behavior. 
@@ -304,24 +357,59 @@ All of these examples can provide an entertaining game with the ability to tell 
 
 \newpage
 \section{Other improvements}
-The system as it currently stands has a lot of area for improvement. We still do not have any real art assets or character animations, making the NPC's look more like robots than persons. These cosmetic Personality and emotions are in our opinion of less importance than the bigger issue of NPC design. In a real person personality and emotions are, of course, not the only factors that influence that persons' behavior in a given situation. Upbringing, inherited traits, culture, social standing, group dynamic etc are all very important factors when trying to decipher why someone exhibits a certain kind of behavior. Next up we will discuss the feasibility of including these factors within our simulation of human behavior.% SOURCE
+The system as it currently stands has a lot of area for improvement. We still do not have any real art assets or character animations, making the NPC's look more like robots than persons. These cosmetic Personality and emotions are in our opinion of less importance than the bigger issue of NPC design. In a real person personality and emotions are, of course, not the only factors that influence that persons' behavior in a given situation. 
+
 
 ~\\
-\subsection{Additions to NPC design}
-Including upbringing and inherited traits as factors within our virtual decision-making process would require two NPC's to combine their 'behavioral factors' in order to create a new NPC; while we consider this a very interesting subject, we believe it to be out of scope for this project. 
+Upbringing, inherited traits, culture, social standing, group dynamic etc are all very important factors when trying to decipher why someone exhibits a certain kind of behavior.
 
 ~\\
-Introducing an NPC's culture into the mix could be a very valuable asset, if we represent cultural influence accurately enough. Having an accurate representation of the impact of culture on behavior could make this project into a training tool for international businesses, since unknowingly disrespecting a clients culture could have disastrous consequences. Important cultural differences lie mostly in areas such as personal space, appropriate ways of approaching a stranger etc. These kinds of interactions could be easily implemented by having NPC's react to the players' immediate presence in a way appropriate to their culture.
+Next up we will discuss the feasibility of including these factors within our simulation of human behavior, with the exception of upbringing:
+including upbringing and inherited traits as factors within our virtual decision-making process would require two NPC's to combine their 'behavioral factors' in order to create a new NPC; while we consider this a very interesting subject, we believe it to be out of scope for this project. 
+
+\newpage
+\subsection{Adding NPC's from different cultures}
+Introducing an NPC's culture into the mix could be a very valuable asset, if we represent cultural influence accurately enough. Having an accurate representation of the impact of culture on behavior could make this project into a training tool for international businesses, since unknowingly disrespecting a clients culture could have disastrous consequences.
 
 ~\\
+\includegraphics[scale=0.7]{Culture}
+
+~\\
+Important cultural differences lie mostly in areas such as personal space, appropriate ways of approaching a stranger etc. These kinds of interactions could be easily implemented by having NPC's react to the players' immediate presence in a way appropriate to their culture.
+
+
+\newpage
 \subsection{NPC groups}
-Last but certainly not least, we will discuss the potential implementation of social standing and group dynamics within our project. Within psychology, groups are classified to be either a formal or informal group. Each of these categories can be further defined as either a command group, an interest group or a friendship group. Broadly speaking, formal command and interest groups are usually found within the work environment, while informal friend groups are more commonly found within clubs and friend groups. 
+Last but certainly not least, we will discuss the potential implementation of social standing and group dynamics within our project. Within psychology, groups are classified to be either a formal or informal group. 
 
 ~\\
-Within the context of our project, we think informal friend groups are a good starting point.The other types of groups, especially the more formal types, always exist because of a higher, shared purpose which the NPC's in our system do not possess. Informal friend groups however  (We will refer to them as IFG's for short) only exist because their members have shared interests or share certain personality traits. Especially the last kind of reason for an IFG to exist would be easy to implement within our system, since we already model our NPC's personalities. We could easily let NPC's with relatively proportionate personality values flock together one by one into a loose group. If we decide to dig deeper into the concept of group formation, we might also want to include the different stages of group formation that are known in psychology literature: %REFERENCE
+Each of these categories can be further defined as either a command group, an interest group or a friendship group. Broadly speaking, formal command and interest groups are usually found within the work environment, while informal friend groups are more commonly found within clubs and friend groups. 
 
 ~\\
-A big challenge when implementing groups of NPC's is that of each individual NPC's autonomy level: How much does an individual decide for him/herself whilst being a member of a group, and how much does the NPC follow the leading group behavior? We will likely implement this with a chance function, in which the level of autonomy being given to each group member determines their chance of acting according to their own personality values, rather than follow majority group decisions. This problem might be made easier if we limit NPC groups to NPC's with nearly identical personality values only: In this case, the homogenous personality values will ensure that most group-action decisions are made unanimously most of the time.
+\includegraphics[scale=0.4]{SimsGroup}
+
+
+~\\
+Within the context of our project, we think informal friend groups are a good starting point.The other types of groups, especially the more formal types, always exist because of a higher, shared purpose which the NPC's in our system do not possess. 
+
+
+
+\newpage
+Informal friend groups however  (We will refer to them as IFG's for short) only exist because their members have shared interests or share certain personality traits. Especially the last kind of reason for an IFG to exist would be easy to implement within our system, since we already model our NPC's personalities. 
+
+~\\
+We could easily let NPC's with relatively proportionate personality values flock together one by one into a loose group. If we decide to dig deeper into the concept of group formation, we might also want to include the different stages of group formation that are known in psychology literature: %REFERENCE
+
+~\\
+A big challenge when implementing groups of NPC's is that of each individual NPC's autonomy level: How much does an individual decide for him/herself whilst being a member of a group, and how much does the NPC follow the leading group behavior? We will likely implement this with a chance function, in which the level of autonomy being given to each group member determines their chance of acting according to their own personality values, rather than follow majority group decisions. 
+
+~\\
+\includegraphics[scale=0.7]{PeerPressure}
+
+
+
+~\\
+This problem might be made easier if we limit NPC groups to NPC's with nearly identical personality values only: In this case, the homogenous personality values will ensure that most group-action decisions are made unanimously most of the time.
 
 ~\\
 A further addition to this concept could be group stages: Distinct phases of the group's development, from the first contact of the group members until the disbanding of the group. Including these dynamic phases within our group concept would make the groups feel much more alive, rather than them simply being blobs of NPC's moving together.

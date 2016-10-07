@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Reference}{3}
+\contentsline {section}{\numberline {3}Our frameworks and languages}{4}
+\contentsline {section}{\numberline {4}Our personality model}{6}
+\contentsline {section}{\numberline {5}General System Structure}{7}
+\contentsline {section}{\numberline {6}NPC behavior}{9}
+\contentsline {subsection}{\numberline {6.1}Actions and graph creation algorithm}{11}
+\contentsline {subsection}{\numberline {6.2}Events}{15}
+\contentsline {section}{\numberline {7}Emotions}{18}
+\contentsline {section}{\numberline {8}Player interaction}{19}
+\contentsline {subsection}{\numberline {8.1}Demo 1: Selecting certain NPC's}{19}
+\contentsline {subsection}{\numberline {8.2}Demo 2: Interrogation game}{20}
+\contentsline {subsection}{\numberline {8.3}Demo 3: Profiling challenge}{21}
+\contentsline {section}{\numberline {9}Other improvements}{22}
+\contentsline {subsection}{\numberline {9.1}Adding NPC's from different cultures}{23}
+\contentsline {subsection}{\numberline {9.2}NPC groups}{24}
+\contentsline {subsection}{\numberline {9.3}NPC to NPC interaction}{26}
+\contentsline {section}{\numberline {10}Planning}{27}
