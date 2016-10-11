@@ -139,13 +139,16 @@ The below ER Diagram documents the high level structure of our system:
 \newpage
 As you can see, the C Sharp code is mainly responsible for setting up the appropriate datastructures and algorithms enabling an NPC to make decisions based on its personality, whilst Casanova is only responsible for translating the resulting list of actions into actual in-game behavior. 
 
+~\\
+We decided to let Casanova handle most of the actual game-logic rather than create algorithms etc in it because Casanova is platform-independent: This enables our game logic to be directly imported into other game frameworks. 
+
 \includegraphics[scale=0.7]{CSHARPVSCASANOVA}
 
-Also, because Casanova is platform-independent, our game logic can be directly imported into other game frameworks. Contrary to C Sharp however, Casanova is not very usefull for creating large algorithms and datastructures: It has no mechanic for declaring functions or methods outside of game rules, and it only supports a very small number of datastructures natively. 
+Contrary to C Sharp however, Casanova is not very usefull for creating large algorithms and datastructures: It has no mechanic for declaring functions or methods outside of game rules, and it only supports a very small number of datastructures natively. 
 
 \newpage
 \section{NPC behavior}
-In our project, each NPC gets his own collection of personality factors and assorted values ranging from 0 to 100, like we talked about earlier. They also possess an 'emotionality threshold', which will be used to determine whether the NPC will display his behavior in a very emotional way, or not. 
+In our project, each NPC gets his own collection of personality factors and assorted values ranging from 0 to 100, like we talked about earlier. 
 
 ~\\
 Finally, they have a collection of accumulated personality values, which use the same 8 factors as their earlier mentioned personality values. These accumulated values will come into play in the decision making algorithm. Initially, these accumulated values are all zero, but they are summed with the personality modifiers of each actions that the NPC chooses to take: This process will be explained in more detail later.
@@ -161,14 +164,14 @@ Through actions that they decide to execute because these actions' personality v
 
 
 \newpage
-If their emotionality threshold is exceeded, they will display very emotional behavior during the execution of actions. How exactly they display this emotion will depend on their personality values.
+We want to incorporate emotions into actions as well, making NPC's who are very sad execute their actions in, well, a very sad manner. How exactly we will implement this is still up for debate; see chapter 7 for more details.
 ~\\
 
 ~\\
 \includegraphics[scale=0.4]{SimsCrying}
 ~\\
 
-Finally, NPC's can react to (and display their personalities) through events: occurences which will trigger an immediate reaction from the NPC.
+Finally, NPC's can react to (and display their personalities) through events: occurences which can trigger an immediate reaction from the NPC.
 ~\\
 
 ~\\
@@ -214,6 +217,7 @@ This process is repeated for each personality value of the NPC, producing a tota
 Very important to note is that this first weighted graph, and only this first graph, uses the fixed (!) personality values of the NPC: Further weighted graphs use the accumulated values which are modified by the actions that an NPC takes.
 
 
+
 \newpage
 After the initial graph has been created and the NPC is spawned in the gameworld, a random action node is selected as a starting node. The starting node is added to the list of actions which will be passed to Casanova, and the NPC's accumulated values are summed with the action's modifier values. 
 
@@ -225,6 +229,8 @@ After that, the decision making algorithm marks the current node as 'visited', c
 
 ~\\
 Note that given enough time, this algorithm will add each action in the graph to the list: The solution to this problem is described in the next page.
+
+
 
 \newpage
 Every 10 seconds of game-time Casanova requests a fresh list of actions from this algorithm. The Unity proxy responds to this request by re-creating the weighted graph, using the accumulated values from the previous actions instead of the fixed personality values of a NPC, like we mentioned earlier. This constant refreshing ensures two things: 
@@ -239,6 +245,15 @@ Firstly, that Casanova only executes the first few actions in the resulting acti
 Secondly, that an NPC's experiences changes his later behavior by way of his/hers accumulated values. 
 The 10 second time-mark can of course be altered, and we are still experimenting with different time thresholds in order to create the most realistic behavior.
 
+\newpage
+\subsection{Improving this algorithm by using maximum weight matching}
+The current algorithm produces relatively sensible NPC behavior, but only chooses one action at a time: There is no planning involved. We want to have our NPC's planning their actions in advance, because this more accurately mimics human behavior. 
+
+~\\
+To accomplish this, we will use a maximum weight matching algorithm known as Edmond's Algorithm together with an implementation of Yossi Shiloach's blossoming and folding algorithms in order to ensure that the maximum weight matching algorithm does not run into infinite cycles. 
+
+~\\
+At the moment of writing nearly, we are nearly finished with making a pure C Sharp version of this algorithm; after this implementation is completed and validated, we will use it to replace our current decision making algorithm. Note that we are not changing how we weight our graph or how we decide which action to execute: We are only changing the methods we use to achieve these goals.
 
 \newpage
 \subsection{Events}
@@ -294,6 +309,7 @@ An NPC is not obliged to react to an event. Just like in real life, not everythi
 \includegraphics[scale=0.4]{InterestLevel}
 ~\\
  If the NPC's computed interest level is greater than or equal to the minimum interest level of the event, he/she will switch to the event reaction nodes instead of the normal action nodes, and react to the event. If not, the NPC will simply continue to perform normal actions, therefore ignoring the event.
+
 
 
 \newpage

@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.25)  7 OCT 2016 15:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.25)  11 OCT 2016 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./planningAndTechnicalSetup.tex
-(./planningAndTechnicalSetup.tex
+**./groupBehavior.tex
+(./groupBehavior.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (c:/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -486,6 +486,16 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
+(c:/texlive/2016/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+\TX@col@width=\dimen136
+\TX@old@table=\dimen137
+\TX@old@col=\dimen138
+\TX@target=\dimen139
+\TX@delta=\dimen140
+\TX@cols=\count103
+\TX@ftn=\toks22
+)
 (c:/texlive/2016/texmf-dist/tex/latex/tocbibind/tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has section divisions on input line 50.
@@ -534,21 +544,21 @@ Package tocloft Info: The document has section divisions on input line 44.
 \cftsubtabindent=\skip98
 \cftsubtabnumwidth=\skip99
 )
-(./planningAndTechnicalSetup.aux)
-\openout1 = `planningAndTechnicalSetup.aux'.
+(./groupBehavior.aux)
+\openout1 = `groupBehavior.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -586,17 +596,17 @@ LaTeX Font Info:    ... okay on input line 60.
 
 (c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count103
-\scratchdimen=\dimen136
+\scratchcounter=\count104
+\scratchdimen=\dimen141
 \scratchbox=\box26
-\nofMPsegments=\count104
-\nofMParguments=\count105
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count106
-\MPscratchDim=\dimen137
-\MPnumerator=\count107
-\makeMPintoPDFobject=\count108
-\everyMPtoPDFconversion=\toks23
+\nofMPsegments=\count105
+\nofMParguments=\count106
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count107
+\MPscratchDim=\dimen142
+\MPnumerator=\count108
+\makeMPintoPDFobject=\count109
+\everyMPtoPDFconversion=\toks24
 ) (c:/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -647,275 +657,78 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 62.
+(Font)              <12> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 62.
+(Font)              <8> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 62.
+(Font)              <6> on input line 63.
  [1
 
-{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./planningAndTechnicalSetup.toc
+{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./groupBehavio
+r.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 1.
 )
 \tf@toc=\write3
-\openout3 = `planningAndTechnicalSetup.toc'.
+\openout3 = `groupBehavior.toc'.
 
- [1] [2]
-<ReferenceEr.png, id=16, 882.8985pt x 598.03426pt>
-File: ReferenceEr.png Graphic file (type png)
- <use ReferenceEr.png>
-Package pdftex.def Info: ReferenceEr.png used on input line 83.
-(pdftex.def)             Requested size: 569.06773pt x 369.88313pt.
 
-Overfull \hbox (150.81406pt too wide) in paragraph at lines 82--84
+[1] <friendshipCreation.jpg, id=13, 771.63281pt x 317.68687pt>
+File: friendshipCreation.jpg Graphic file (type jpg)
+
+<use friendshipCreation.jpg>
+Package pdftex.def Info: friendshipCreation.jpg used on input line 82.
+(pdftex.def)             Requested size: 385.81546pt x 158.84303pt.
+ [2 <./friendshipCreation.jpg>]
+Underfull \hbox (badness 6691) in paragraph at lines 109--109
+[]|\OT1/cmr/m/n/10.95 Higher pur-pose is more
+ []
+
+
+Underfull \hbox (badness 1371) in paragraph at lines 109--109
+\OT1/cmr/m/n/10.95 im-por-tant than in-di-vid-ual
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--111
+
+ []
+
+[3] <group.jpg, id=21, 605.26125pt x 317.68687pt>
+File: group.jpg Graphic file (type jpg)
+ <use group.jpg>
+Package pdftex.def Info: group.jpg used on input line 123.
+(pdftex.def)             Requested size: 423.67998pt x 222.37927pt.
+
+Overfull \hbox (5.4263pt too wide) in paragraph at lines 122--124
 [] 
  []
 
-[3 <./ReferenceEr.png>] <proxySystem.png, id=22, 715.17188pt x 341.77687pt>
-File: proxySystem.png Graphic file (type png)
-
-<use proxySystem.png>
-Package pdftex.def Info: proxySystem.png used on input line 93.
-(pdftex.def)             Requested size: 357.58505pt x 170.88802pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
-
- []
-
-[4 <./proxySystem.png>] <XmlSystem.png, id=27, 1353.55687pt x 737.75626pt>
-File: XmlSystem.png Graphic file (type png)
-
-<use XmlSystem.png>
-Package pdftex.def Info: XmlSystem.png used on input line 101.
-(pdftex.def)             Requested size: 406.07019pt x 221.32858pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--103
-
- []
-
-[5 <./XmlSystem.png>] <sim.jpg, id=32, 602.25pt x 362.10281pt>
-File: sim.jpg Graphic file (type jpg)
- <use sim.jpg>
-Package pdftex.def Info: sim.jpg used on input line 126.
-(pdftex.def)             Requested size: 421.57211pt x 253.47023pt.
-
-Overfull \hbox (3.31844pt too wide) in paragraph at lines 125--129
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--129
-
- []
-
-[6 <./sim.jpg>] <SystemEr.png, id=37, 1103.62312pt x 747.54282pt>
-File: SystemEr.png Graphic file (type png)
-
-<use SystemEr.png>
-Package pdftex.def Info: SystemEr.png used on input line 136.
-(pdftex.def)             Requested size: 569.07112pt x 369.88086pt.
-
-Overfull \hbox (150.81744pt too wide) in paragraph at lines 135--138
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--138
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--138
-
- []
-
-[7 <./SystemEr.png>] <CSHARPVSCASANOVA.png, id=42, 547.44525pt x 319.1925pt>
-File: CSHARPVSCASANOVA.png Graphic file (type png)
-
-<use CSHARPVSCASANOVA.png>
-Package pdftex.def Info: CSHARPVSCASANOVA.png used on input line 145.
-(pdftex.def)             Requested size: 383.20906pt x 223.43321pt.
- [8 <./CSHARPVSCASANOVA.png>]
-<SimsEating.jpg, id=47, 822.6735pt x 462.528pt>
-File: SimsEating.jpg Graphic file (type jpg)
- <use SimsEating.jpg>
-Package pdftex.def Info: SimsEating.jpg used on input line 163.
-(pdftex.def)             Requested size: 329.06357pt x 185.0079pt.
- [9 <./SimsEating.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 167--169
-
- []
-
-<SimsCrying.jpg, id=51, 642.4pt x 481.8pt>
-File: SimsCrying.jpg Graphic file (type jpg)
- <use SimsCrying.jpg>
-Package pdftex.def Info: SimsCrying.jpg used on input line 171.
-(pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--173
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--176
-
- []
-
-<SimsFire.jpg, id=52, 963.6pt x 539.616pt>
-File: SimsFire.jpg Graphic file (type jpg)
- <use SimsFire.jpg>
-Package pdftex.def Info: SimsFire.jpg used on input line 178.
-(pdftex.def)             Requested size: 385.43317pt x 215.84258pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--180
-
- []
-
-[10 <./SimsCrying.jpg> <./SimsFire.jpg>]
-<ActionFlag.png, id=56, 292.6935pt x 142.131pt>
-File: ActionFlag.png Graphic file (type png)
- <use ActionFlag.png>
-Package pdftex.def Info: ActionFlag.png used on input line 189.
-(pdftex.def)             Requested size: 204.88405pt x 99.491pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--191
-
- []
-
-<InitialGraph.png, id=57, 1033.461pt x 492.6405pt>
-File: InitialGraph.png Graphic file (type png)
- <use InitialGraph.png>
-Package pdftex.def Info: InitialGraph.png used on input line 198.
-(pdftex.def)             Requested size: 413.37708pt x 197.0527pt.
-
-Overfull \hbox (12.1234pt too wide) in paragraph at lines 198--199
-[][] 
- []
-
-[11 <./ActionFlag.png> <./InitialGraph.png>]
-<FillingAlgorithm.png, id=63, 1240.635pt x 667.293pt>
-File: FillingAlgorithm.png Graphic file (type png)
-
-<use FillingAlgorithm.png>
-Package pdftex.def Info: FillingAlgorithm.png used on input line 213.
-(pdftex.def)             Requested size: 496.24521pt x 266.91246pt.
-
-Overfull \hbox (77.99153pt too wide) in paragraph at lines 212--214
-[] 
- []
-
-[12 <./FillingAlgorithm.png>]
-<DecisionMakingAlgorithm.png, id=69, 1550.79375pt x 647.41875pt>
-File: DecisionMakingAlgorithm.png Graphic file (type png)
-
-<use DecisionMakingAlgorithm.png>
-Package pdftex.def Info: DecisionMakingAlgorithm.png used on input line 225.
-(pdftex.def)             Requested size: 483.69899pt x 213.392pt.
-
-Overfull \hbox (65.44531pt too wide) in paragraph at lines 224--226
-[] 
- []
-
-[13 <./DecisionMakingAlgorithm.png>]
-<AccumulatedValues.png, id=74, 1464.97313pt x 624.83438pt>
-File: AccumulatedValues.png Graphic file (type png)
-
-<use AccumulatedValues.png>
-Package pdftex.def Info: AccumulatedValues.png used on input line 239.
-(pdftex.def)             Requested size: 483.68852pt x 213.39429pt.
-
-Overfull \hbox (65.43484pt too wide) in paragraph at lines 238--240
-[] 
- []
-
-[14 <./AccumulatedValues.png>] [15]
-<SimsFire2.jpg, id=82, 465.23813pt x 261.22594pt>
-File: SimsFire2.jpg Graphic file (type jpg)
- <use SimsFire2.jpg>
-Package pdftex.def Info: SimsFire2.jpg used on input line 263.
-(pdftex.def)             Requested size: 325.66446pt x 182.85689pt.
- [16 <./SimsFire2.jpg>] <Event.png, id=86, 1041.8925pt x 748.29562pt>
-File: Event.png Graphic file (type png)
- <use Event.png>
-Package pdftex.def Info: Event.png used on input line 289.
-(pdftex.def)             Requested size: 416.74962pt x 299.31294pt.
-
-[17 <./Event.png>] <InterestLevel.png, id=91, 1041.8925pt x 600.74437pt>
-File: InterestLevel.png Graphic file (type png)
-
-<use InterestLevel.png>
-Package pdftex.def Info: InterestLevel.png used on input line 309.
-(pdftex.def)             Requested size: 416.74962pt x 240.29349pt.
-
-Overfull \hbox (0.92928pt too wide) in paragraph at lines 308--312
-[]  
- []
-
-[18 <./InterestLevel.png>] [19] [20]
-<Interrogation.jpg, id=103, 481.8pt x 240.9pt>
-File: Interrogation.jpg Graphic file (type jpg)
- <use Interrogation.jpg>
-Package pdftex.def Info: Interrogation.jpg used on input line 343.
-(pdftex.def)             Requested size: 337.25769pt x 168.62883pt.
- [21 <./Interrogation.jpg>] <Hitman.png, id=107, 1284.8pt x 722.7pt>
-File: Hitman.png Graphic file (type png)
- <use Hitman.png>
-Package pdftex.def Info: Hitman.png used on input line 355.
-(pdftex.def)             Requested size: 385.44298pt x 216.81166pt.
-
-[22 <./Hitman.png (PNG copy)>] [23]
-<Culture.jpg, id=114, 391.4625pt x 353.06906pt>
-File: Culture.jpg Graphic file (type jpg)
- <use Culture.jpg>
-Package pdftex.def Info: Culture.jpg used on input line 391.
-(pdftex.def)             Requested size: 274.02187pt x 247.14665pt.
- [24 <./Culture.jpg>] <SimsGroup.jpg, id=119, 697.60625pt x 539.01375pt>
-File: SimsGroup.jpg Graphic file (type jpg)
- <use SimsGroup.jpg>
-Package pdftex.def Info: SimsGroup.jpg used on input line 405.
-(pdftex.def)             Requested size: 279.03755pt x 215.60167pt.
-
-[25 <./SimsGroup.jpg>] <PeerPressure.jpg, id=123, 602.25pt x 316.18124pt>
-File: PeerPressure.jpg Graphic file (type jpg)
-
-<use PeerPressure.jpg>
-Package pdftex.def Info: PeerPressure.jpg used on input line 423.
-(pdftex.def)             Requested size: 421.57211pt x 221.32535pt.
-
-Overfull \hbox (3.31844pt too wide) in paragraph at lines 422--424
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
-
- []
-
-[26 <./PeerPressure.jpg>] [27]
-Overfull \hbox (53.21005pt too wide) in paragraph at lines 441--455
-[] 
- []
-
-[28] (./planningAndTechnicalSetup.aux) ) 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 127.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 127.
+[4 <./group.jpg>] [5] (./groupBehavior.aux) ) 
 Here is how much of TeX's memory you used:
- 4402 strings out of 493013
- 65663 string characters out of 6136993
- 137037 words of memory out of 5000000
- 7864 multiletter control sequences out of 15000+600000
- 10013 words of font info for 35 fonts, out of 8000000 for 9000
+ 4356 strings out of 493013
+ 64302 string characters out of 6136993
+ 138100 words of memory out of 5000000
+ 7831 multiletter control sequences out of 15000+600000
+ 10017 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,43p,587b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2016/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr17.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb
->
-Output written on planningAndTechnicalSetup.pdf (29 pages, 3249651 bytes).
+ 44i,10n,43p,469b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2016/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2016/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmss12.pfb>
+Output written on groupBehavior.pdf (6 pages, 258080 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
