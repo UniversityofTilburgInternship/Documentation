@@ -69,6 +69,8 @@
 \section{Introduction}
 In this document, we will be presenting our concept for the implementation of group behavior within our internship project. Since group behavior and the deeper themes of friendship and group forming in humans are subjects that we have no experience in, we wanted to present our concept to you first to see whether our assumptions match reality. 
 
+
+\newpage
 \section{Friendship system}
 In order to make our room filled with NPC's seem more like a room filled with humans, we intend to implement a friendship system. 
 
@@ -114,7 +116,7 @@ Until we decide to implement some kind of goal seeking behavior within our NPC's
 
 \newpage
 \section{An implementation of informal friendship groups}
-The friendship system that we discussed earlier will be used as a bridge to introduce NPC's to groups. A group consists of NPC's who all share a friendship with at least a certain percentage of the NPC's in the group. 
+The friendship system that we discussed earlier will be used as a bridge to introduce NPC's to groups. A group consists of NPC's who all have to share a friendship with at least a certain percentage of the NPC's in the group. 
 
 ~\\
 For example:
@@ -123,11 +125,25 @@ For example:
 \includegraphics[scale=0.7]{group} 
 
 
+
 ~\\
+If an NPC's loses friendship of enough group members, he/she will be removed from the group.
+
+~\\
+
+
+\newpage
 A new NPC can join an existing group; Its' accumulated values are than tested against the mean\footnote{We use the mean instead of the average since this could lead to a group of egoists with one altruists having a group personality value that does not accurately represent the group members.} of all the accumulated personality values of all the group members.
 
 ~\\
+\includegraphics[scale=0.7]{groupJoining}
 
+
+~\\
+ If this returns a match within the earlier mentioned margin, the NPC is added to the group and the NPC gets the chance to become friends with each group member. If he/she becomes and stays friends with enough of the group members, the NPC gets to stay!
+
+~\\
+NPC's within a group are forced to only choose actions that conform to their groups' mean personality values instead of their own, whilst the accumulated values from these actions still add on to the NPC's personal accumulated values. This ensures that groups become tighter and tighter over time, unless NPC's are kicked out according to the earlier mentioned conditions.
 
 \newpage
 \section{References}
