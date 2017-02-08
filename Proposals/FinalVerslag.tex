@@ -1,0 +1,261 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+%%%BEGIN Article customizations
+%Set font, font size and char encoding
+\documentclass[11pt]{article} 
+
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{xcolor}
+\usepackage{lastpage}
+\usepackage{tabularx}
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} 
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} 
+% (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+
+%➢ naam en studentnummer; 
+%➢ naam stagebedrijf en bedrijfsbegeleider; 
+%➢ start- en einddatum van de stage; 
+%➢ omschrijving van het stagebedrijf; 
+%➢ doel van de stage;
+% ➢ stageopdracht/ stagewerkzaamheden; 
+%➢ persoonlijke leerdoelen/ verwachtingen; 
+%➢ inschatting van de te behalen competenties (zie bijlage 1).
+
+
+\title{\Huge Internship plan}
+\author{Robert Kraaijeveld 
+	Institute for Communication, Media and Information technologies\\
+	Hogeschool Rotterdam
+	Rotterdam, Zuid-Holland, The Netherlands \\
+	}
+\begin{document}
+\nocite{*}
+\date{}
+\maketitle
+\lhead{Internship plan}
+\rhead{}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage\ of \pageref*{LastPage}}
+
+\newpage
+\tableofcontents
+\pagebreak
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction}
+
+In this document, I will be formally proving that I have gained experience in the aforementioned competences. I will be doing this by providing examples of me gaining experience in a particular (sub)competence by way of a STARR: A formalized way of describing situations. (The english translation of the acronym is Situation, Task, Actions, Result, Feedback).
+
+%having different ideas than spronck and finally deciding upon personality demo and follow it by providing a full plan
+\section{Sub-competence 1: I can work according to a pre-made and approved internship-plan, and provide motivation for any changes. } 
+\subsection{Situation}
+
+\subsection{Task}
+
+\subsection{Actions}
+
+\subsection{Result}
+
+\subsection{Feedback}
+
+
+\newpage
+\section{Sub-competence 2:I can create an analysis of the given internship task,
+using existing methods and
+techniques. Also, I am
+able to create a requirementanalysis
+for (part of) a software
+system with different
+stakeholder, whilst taking into
+account quality standards. } 
+\subsection{Situation}
+Our client, dr. Spronck (representing Tilburg University) was not very clear on what kind of project he wanted us to build during our internship so he wanted us to come up with ideas of our own.
+\subsection{Task}
+We decided that the best course of action would be to create at least one distinct proposal each, in order to provide a variety of possible options for doctor Spronck.
+\subsection{Actions}
+I created a proposal for a traffic-simulator within the Experience Room, which could be used in training novice drivers etc. without any real world consequences in case they make mistakes.
+\subsection{Result}
+After an hour or so of discussing our various proposals, dr. Spronck decided that he wanted to shoot for a completely different option, namely creating the personality demo which has also become our final product.
+\subsection{Feedback}
+This occassion really showed me how volatile a clients wishes can be; despite our very varied proposals, dr. Spronck decided he wanted something completely else. This learned me not to set proposals or ideas in stone too much, since clients can easily change their minds radically.
+
+
+%finding papers
+\newpage
+\section{Sub-competence 3: I can create an analysis of
+the given internship task,
+using existing methods and
+techniques. Also, I am
+able to create a requirementanalysis
+for (part of) a software
+system with different
+stakeholder, whilst taking into
+account quality standards. } 
+\subsection{Situation}
+We were in a stage of the project in which we had decided on an early logical representation of our project, but we had not yet decided on many concrete implementation details.
+\subsection{Task}
+We decided that each of us would scour the (academic part of) the internet for papers and other academic documents which could give us more information on algorithms for pathfinding in the yet to be made graph of possible NPC actions.
+\subsection{Actions}
+I found out about, and helped translate and discuss a paper by dr. Schiloach, detailing a possible implementation of a blossoming maximum weight matching algorithm for weighted, undirected graph pathfinding.
+\subsection{Result}
+After extensive discussion with mr. Abbadi, we decided to build a prototype of the aforementioned algorithm, based off of some earlier work in C++ by mr. Abbadi. 
+\subsection{Feedback}
+As it turned out, the algorithm we made was actually not very suitable for the task at hand since it did not allow changes to the graph to be made during its execution. I learned from this experience that it is very important to validate potential solutions constantly, so that one does not waste a lot of time implementing a solution that is imperfect.
+
+
+\newpage
+\section{Sub-competence 4: I am able to create an
+acceptance-test using quality
+standards.  } 
+\subsection{Situation}
+We needed to be sure that the project that we made reflected the clients wishes.
+\subsection{Task}
+We had to find a way to continously test that our project matched dr. Sproncks wishes.
+\subsection{Actions}
+We continuosly called or met with dr. Spronck and showed him our progress in the Experience Room itself twice before the demo.
+\subsection{Result}
+Whilst dr. Spronck had some corrections for us in the beginning, after a few meetings we where all completely on the same page as to what the project should become.
+\subsection{Feedback}
+The more we met with dr. Spronck, the more our visions began to converge.
+
+%providing cnv feedback
+\newpage
+\section{Sub-competence 5:I am able to provide a wellargumented
+and guiding advice
+regarding processes, software
+and/or new technologies,
+and I am able to present this
+advice in a convincing and understandable
+way.  } 
+\subsection{Situation}
+We used the experimental language Casanova 2.0 in our project, as well as the newly made Experience Room at Tilburg University.
+\subsection{Task}
+Not only did we need to create a fitting project, but we were also expected to provide feedback on the usage of the aforementioned experimental assets.
+\subsection{Actions}
+We directed any issue or bug within Casanova to mr. Abbadi, and also managed to discover a major bug when using the Unity Animator within the Experience Room. 
+\subsection{Result}
+Mr. Abbadi took our feedback into account when preparing his language for release (Within the context of his thesis) and the Unity Animator issue was relayed to the Tilburg University Experience Room Google Group.
+\subsection{Feedback}
+Especially the Experience Room Google Group helped us out a lot when we were first starting, so it was only natural that we would add our knowledge to this pool.
+
+
+\newpage
+\section{Sub-competence 6: I am able to create a design
+for (part of a) softwaresystem,
+using existing components,
+libraries and designqualitystandards. } 
+\subsection{Situation}
+We had to decide on a language, or languages, to use in our project.
+\subsection{Task}
+We needed a solid language or framework.
+\subsection{Actions}
+We decided to use the experimental casanova language.
+\subsection{Result}
+Because of its' experimental nature, casanova provided quite a few challenges; but its' use also meant that our project's main logic can, in theory, be ported to any other game engine capable
+of providing proxies to CNV code.
+\subsection{Feedback}
+Unity already provides several ways of controlling statemachine easily, which kind of negate CNV's advantage in this regard. Though not fully, as mentioned above.
+
+
+\newpage
+\section{Sub-competence 7:  I am able to validate a design
+based on specifications which
+resulted from analysis. } 
+\subsection{Situation}
+We needed a way to structure our project's progress.
+\subsection{Task}
+We set out to structure our project and change our tasks.
+\subsection{Actions}
+We decided to use a form of Kanban combined with a Trello Board.
+\subsection{Result}
+We did not use this board very much since most of our problems and decision making aside from large implementation components.
+\subsection{Feedback}
+It takes a more dedicated, micromanaging team to completely implement a project form like Kanban.
+
+
+\newpage
+\section{Sub-competence 8:   I am able to implement software
+which conforms the requirements
+of the given assignment,
+holding this software
+by the high standards of
+quality that are used in the
+software engineering industry
+today. } 
+\subsection{Situation}
+We were using the experimental language Casanova which requires a connection with its host language to work.
+\subsection{Task}
+We had to find some way to connect Casanova and Unity.
+\subsection{Actions}
+We implemented the proxy design pattern in C\# scripts.
+\subsection{Result}
+We were able to directly control Unity behavior by using these proxies.
+\subsection{Feedback}
+This was a good, but maintenance heavy-solution.
+
+
+
+\newpage
+\section{Sub-competence 9:  I am able to use unittests,
+integrationtests and systemtests.
+I am also able to
+automate these tests.  } 
+\subsection{Situation}
+We had just decided and implemented a genetic algorithm for pathfinding in the actions graph.
+\subsection{Task}
+We needed to validate this algorithm.
+\subsection{Actions}
+We created some simple tests benchmarking it.
+\subsection{Result}
+The results were acceptable.
+\subsection{Feedback}
+
+
+
+
+\end{document}
